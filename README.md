@@ -45,5 +45,5 @@ const dependencies = inspectGetterDeps({
 
 dependencies.name;
 // Set { 'alias' }
-// not Set { 'realName' } or Set { 'alias', 'realName' }
+// not Set { 'alias', 'realName' }
 ```
