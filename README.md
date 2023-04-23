@@ -11,9 +11,9 @@ npm i detective-getter-deps
 ## Usage
 
 ```ts
-import { inspectGetterDeps } from 'detective-getter-deps';
+import { detectGetterDeps } from 'detective-getter-deps';
 
-const dependencies = inspectGetterDeps({
+const dependencies = detectGetterDeps({
   firstName: 'jeans',
   lastName: 'new',
   get fullName() {
@@ -33,9 +33,9 @@ This is useful when you want to know which properties are used in the getter.
 If there are conditional evaluation rules within the getter body, it may not work properly because there could be properties that are not accessed depending on the object state conditions.
 
 ```ts
-import { inspectGetterDeps } from 'detective-getter-deps';
+import { detectGetterDeps } from 'detective-getter-deps';
 
-const dependencies = inspectGetterDeps({
+const dependencies = detectGetterDeps({
   realName: 'deno',
   alias: 'saurus',
   get name() {

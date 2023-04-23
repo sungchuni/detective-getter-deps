@@ -1,7 +1,7 @@
 {
   "name": "detective-getter-deps",
-  "version": "1.0.0",
-  "description": "inspect getter dependencies via proxy",
+  "version": "2.0.0",
+  "description": "detect getter dependencies via proxy",
   "keywords": [
     "detective",
     "getter",
@@ -11,8 +11,11 @@
   ],
   "license": "Apache-2.0",
   "author": "sungchuni <new.sungchuni@gmail.com>",
-  "main": "src/main.ts",
+  "main": "lib/main.js",
+  "types": "lib/main.d.ts",
   "scripts": {
+    "build": "tsc src/*.ts --declaration --outDir lib",
+    "prebuild": "rm -rf lib",
     "test": "jest"
   },
   "devDependencies": {

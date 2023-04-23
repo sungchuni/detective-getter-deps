@@ -1,8 +1,8 @@
-import { inspectGetterDeps } from '../src/main';
+import { detectGetterDeps } from '../src/main';
 
-describe('inspectGetterDeps', () => {
+describe('detectGetterDeps', () => {
   it('should return a map of dependencies', () => {
-    const dependencies = inspectGetterDeps({
+    const dependencies = detectGetterDeps({
       a: 1,
       get b(): number {
         return this.a;
@@ -21,7 +21,7 @@ describe('inspectGetterDeps', () => {
   });
 
   it('should return empty map if no getters', () => {
-    const dependencies = inspectGetterDeps({
+    const dependencies = detectGetterDeps({
       a: 1,
       b: 2,
     });
@@ -30,7 +30,7 @@ describe('inspectGetterDeps', () => {
   });
 
   it('may not work properly with nested getters', () => {
-    const dependencies = inspectGetterDeps({
+    const dependencies = detectGetterDeps({
       a: 1,
       b: 2,
       get c() {

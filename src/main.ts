@@ -1,6 +1,6 @@
 import { extractGetters } from './extract-getters';
 
-export const inspectGetterDeps = <T extends Record<string, unknown>>(
+export const detectGetterDeps = <T extends Record<string, unknown>>(
   object: T
 ): Map<keyof T, Set<keyof T>> => {
   const dependencies: Map<keyof T, Set<keyof T>> = new Map();
