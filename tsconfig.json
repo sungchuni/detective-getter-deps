@@ -2,7 +2,6 @@
   "compilerOptions": {
     "baseUrl": ".",
     "esModuleInterop": true,
-    "exactOptionalPropertyTypes": true,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
