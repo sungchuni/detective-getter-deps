@@ -13,6 +13,10 @@
   "author": "sungchuni <new.sungchuni@gmail.com>",
   "main": "lib/main.js",
   "types": "lib/main.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sungchuni/detective-getter-deps"
+  },
   "scripts": {
     "build": "tsc src/*.ts --declaration --outDir lib",
     "prebuild": "rm -rf lib",
