@@ -1,14 +1,14 @@
 import { extractGetters } from './extract-getters';
 
+const isPropertyInTarget = <T extends object>(
+  property: string | number | symbol,
+  target: T
+): property is keyof T => property in target;
+
 export const detectGetterDeps = <T extends object>(
   object: T
 ): Map<keyof T, Set<keyof T>> => {
   const dependencies: Map<keyof T, Set<keyof T>> = new Map();
-
-  const isPropertyInTarget = <T extends object>(
-    property: string | number | symbol,
-    target: T
-  ): property is keyof T => property in target;
 
   for (const [key, propertyDescriptor] of extractGetters(object)) {
     propertyDescriptor.get?.call(
