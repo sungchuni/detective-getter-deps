@@ -1,6 +1,6 @@
 {
   "name": "detective-getter-deps",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Detect getter dependencies via proxy",
   "keywords": [
     "detective",
