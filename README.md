@@ -21,7 +21,7 @@ const dependencies = detectGetterDeps({
   },
 });
 
-dependencies.fullName; // Set { 'firstName', 'lastName' }
+dependencies.get('fullName'); // Set { 'firstName', 'lastName' }
 ```
 
 ## Why?
@@ -43,7 +43,5 @@ const dependencies = detectGetterDeps({
   },
 });
 
-dependencies.name;
-// Set { 'alias' }
-// not Set { 'alias', 'realName' }
+dependencies.get('name'); // Set { 'alias' }, not Set { 'alias', 'realName' }
 ```
